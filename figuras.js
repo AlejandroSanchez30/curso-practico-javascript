@@ -134,7 +134,6 @@ function alturaTrianguloIsc(lado, base)
 
 }
 
-
 function calcularAlturaTrianguloIsc()
 {
     var ladoTrianguloIsc = parseFloat(document.getElementById("ladoTrianguloIsc").value);
