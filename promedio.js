@@ -1,12 +1,26 @@
 const lista1 = [100, 200, 300, 500];
 
-let sumaLista1 = 0;
 
-for(let i = 0; i < lista1.length; i++)
+function calcularMediaAritmetica(lista)
 {
-    sumaLista1 += lista1[i];
+   /* let sumaLista = 0;
+
+    for(let i = 0; i < lista.length; i++)
+    {
+        sumaLista += lista[i];
+    }
+    */
+
+    let sumaLista = lista.reduce(
+        function (valorAcumulado = 0, nuevoElemento)
+        {
+            return valorAcumulado + nuevoElemento;
+        }
+    );
+
+    sumaLista = sumaLista / lista.length;
+
+    return sumaLista;
 }
 
-sumaLista1 = sumaLista1 / lista1.length;
-
-alert(sumaLista1);
+alert(calcularMediaAritmetica(lista1));
